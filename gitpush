@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [ "$#"==1 ]
+then
+	git add .
+else 
+	for arg;
+	do
+		git add "$arg"
+	done
+fi
+
+# for file in ${files[@]}
+# do
+#	git add $file
+# done
+echo "Enter the commit message:"
+read msg
+git commit -m "$msg"
+git push -u origin master
