@@ -9,11 +9,6 @@ else
 		git add "$arg"
 	done
 fi
-
-# for file in ${files[@]}
-# do
-#	git add $file
-# done
 echo "Enter the commit message:"
 read msg
 git commit -m "$msg"
